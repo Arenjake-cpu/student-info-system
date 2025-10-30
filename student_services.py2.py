@@ -1,6 +1,6 @@
 import json
 import os
-from ..models.student import Student.py
+from ..models.student import Student
 
 class StudentService:
     def __init__(self, data_file='data/students.json'):
@@ -56,4 +56,5 @@ class StudentService:
         new_students = [s for s in students if s['student_id'] != student_id]
         self._save_students(new_students)
         return len(students) != len(self._load_students())
+
 
